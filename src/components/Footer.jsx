@@ -5,7 +5,7 @@ class Footer extends React.Component {
   render() {
     return (
       <footer className="bg-orange-500 text-black py-6">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-6 space-y-4 md:space-y-0">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 md:px-6 space-y-4 md:space-y-0">
           
           {/* Texto */}
           <p className="text-center md:text-left text-lg font-medium">
@@ -36,7 +36,7 @@ class Footer extends React.Component {
         </div>
 
         {/* Línea decorativa */}
-        <div className="border-t border-black/20 mt-4"></div>
+        <div className="border-t border-black/20 mt-4 mx-4 sm:mx-6 md:mx-6"></div>
       </footer>
     );
   }
