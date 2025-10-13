@@ -9,7 +9,7 @@ class HomePage extends React.Component {
         <section className="grid md:grid-cols-2 gap-0 items-center bg-gray-300">
           <header className="flex flex-col md:flex-row items-center gap-4 pl-4">
             <h1 className="text-3xl font-bold mb-0 text-center md:text-left">
-              Campeones del Mundial de Constructores 2024
+              Campeones del Mundial de Constructores 2024 i 2025
             </h1>
             <img
               src="/constructor.webp"
