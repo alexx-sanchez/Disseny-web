@@ -3,27 +3,35 @@ import React from 'react';
 class Header extends React.Component {
   render() {
     return (
-      <header>
-        {/* Logo con fondo animado sutil */}
-        <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-orange-100 to-orange-200 animate-gradient-x z-0"></div>
-          <div className="relative z-10 text-center py-4 px-4">
+      <header className="relative w-full">
+        {/* Fondo hero sutil con imagen */}
+        <div className="relative h-[180px] sm:h-[220px] md:h-[260px] overflow-hidden">
+          {/* Gradiente encima para legibilidad */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/50"></div>
+
+          {/* Logo centrado */}
+          <div className="relative z-10 flex justify-center items-center h-full">
             <img
               src="/logo.png"
               alt="McLaren Logo"
-              className="max-h-[80px] sm:max-h-[100px] mx-auto"
+              className="max-h-[80px] sm:max-h-[100px] md:max-h-[120px]"
             />
           </div>
         </div>
 
-        {/* Menú normal responsive */}
-        <nav>
-          <ul className="flex flex-col sm:flex-row justify-around bg-orange-500 py-2 m-0 list-none text-black">
-            <li className="py-1 sm:py-0"><a href="#" className="hover:underline text-lg">Equip F1</a></li>
-            <li className="py-1 sm:py-0"><a href="#" className="hover:underline text-lg">Historia</a></li>
-            <li className="py-1 sm:py-0"><a href="#" className="hover:underline text-lg">Pilots</a></li>
-            <li className="py-1 sm:py-0"><a href="#" className="hover:underline text-lg">Cotxe</a></li>
-            <li className="py-1 sm:py-0"><a href="#" className="hover:underline text-lg">Contacte</a></li>
+        {/* Menú */}
+        <nav className="bg-orange-500 shadow-md">
+          <ul className="flex flex-col sm:flex-row justify-around items-center py-2 m-0 list-none text-black">
+            {['Equip F1', 'Historia', 'Pilots', 'Cotxe', 'Contacte'].map((item, i) => (
+              <li key={i} className="py-1 sm:py-0">
+                <a
+                  href={`#${item.toLowerCase().replace(/\s/g, '')}`}
+                  className="hover:underline text-lg font-medium transition-colors duration-200"
+                >
+                  {item}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
