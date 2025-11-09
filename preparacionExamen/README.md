@@ -1,16 +1,75 @@
-# React + Vite
+Examen React - Proyecto de Práctica
+===================================
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es un repaso para el examen de React. Incluye componentes básicos:
+Header, Main y Footer, con estilo en CSS. Ideal para practicar organización
+de componentes, layouts, CSS y React Router.
 
-Currently, two official plugins are available:
+-------------------------------------------------------------------------------
+Tecnologías usadas
+-------------------------------------------------------------------------------
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 18+
+- Vite
+- CSS puro
+- React Router (opcional, para practicar rutas)
 
-## React Compiler
+-------------------------------------------------------------------------------
+Instalación y ejecución
+-------------------------------------------------------------------------------
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Crear el proyecto con Vite:
+   npm create vite@latest examen-react
 
-## Expanding the ESLint configuration
+2. Acceder a la carpeta del proyecto:
+   cd examen-react
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Instalar dependencias:
+   npm install
+
+4. Ejecutar el servidor de desarrollo:
+   npm run dev
+
+5. Abrir el proyecto en el navegador usando la URL que muestra Vite 
+   (por ejemplo: http://localhost:5173)
+
+-------------------------------------------------------------------------------
+Estructura de carpetas sugerida
+-------------------------------------------------------------------------------
+```
+examen-react/
+│
+├─ index.html
+├─ package.json
+├─ vite.config.js
+├─ src/
+│  ├─ main.jsx
+│  ├─ App.jsx
+│  ├─ index.css
+│  └─ components/
+│     ├─ Header.jsx
+│     ├─ Main.jsx
+│     └─ Footer.jsx
+```
+-------------------------------------------------------------------------------
+Componentes
+-------------------------------------------------------------------------------
+
+1. Header.jsx
+   - Logo centrado.
+   - Menú de navegación horizontal.
+   - Práctica de enlaces internos y estilizado con CSS.
+   - Ejemplo de uso de <Link> si se usa React Router.
+
+2. Main.jsx
+   - Contenido principal dividido en secciones:
+     - Inicio
+     - Sobre mí
+     - Contacto
+   - Práctica de organización de contenido, centrado con Flexbox y estilos.
+   - Secciones con fondo gris claro y bordes redondeados.
+
+3. Footer.jsx
+   - Pie de página simple.
+   - Práctica de tipografía y colores.
+   - Texto centrado y destacado con amarillo.
