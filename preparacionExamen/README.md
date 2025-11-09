@@ -1,38 +1,29 @@
 Examen React - Proyecto de Práctica
 ===================================
-
-Este proyecto es un repaso para el examen de React. Incluye componentes básicos:
-Header, Main y Footer, con estilo en CSS. Ideal para practicar organización
-de componentes, layouts, CSS y React Router.
-
--------------------------------------------------------------------------------
-Tecnologías usadas
--------------------------------------------------------------------------------
-
-- React 18+
-- Vite
-- CSS puro
-- React Router (opcional, para practicar rutas)
-
 -------------------------------------------------------------------------------
 Instalación y ejecución
 -------------------------------------------------------------------------------
 
 1. Crear el proyecto con Vite:
+```
    npm create vite@latest examen-react
-
+```
 2. Acceder a la carpeta del proyecto:
+```
    cd examen-react
-
+```
 3. Instalar dependencias:
+```
    npm install
-
+```
 4. Ejecutar el servidor de desarrollo:
+```
    npm run dev
-
+```
 5. Abrir el proyecto en el navegador usando la URL que muestra Vite 
+```
    (por ejemplo: http://localhost:5173)
-
+```
 -------------------------------------------------------------------------------
 Estructura de carpetas sugerida
 -------------------------------------------------------------------------------
