@@ -1,5 +1,5 @@
 export default function Pilots() {
   return (
-    <div>Hola</div>
+    <div>PILOTOS</div>
   );
 }

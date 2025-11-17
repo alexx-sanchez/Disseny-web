@@ -1,5 +1,5 @@
 export default function Contacte() {
   return (
-    <div>Hola</div>
+    <div>CONTACTO</div>
   );
 }

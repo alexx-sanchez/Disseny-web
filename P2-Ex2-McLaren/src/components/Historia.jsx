@@ -1,5 +1,5 @@
 export default function Historia() {
   return (
-    <div>Hola</div>
+    <div>HISTORIA</div>
   );
 }
