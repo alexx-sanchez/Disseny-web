@@ -11,7 +11,7 @@
   position: relative;
   height: 180px;
   overflow: hidden;
-  background-color: #3d4058;
+  background-color: #0f0f0f;
 }
 
 @media (min-width: 640px) { /* sm */
@@ -36,20 +36,21 @@
 }
 
 .logo-img {
-  max-height: 80px;
+  max-height: 120px;
 }
 
 @media (min-width: 640px) { /* sm */
   .logo-img {
-    max-height: 100px;
+    max-height: 160px; /* antes 100px */
   }
 }
 
 @media (min-width: 768px) { /* md */
   .logo-img {
-    max-height: 120px;
+    max-height: 200px; /* antes 120px */
   }
 }
+
 
 /* NAVEGACIÓN */
 .nav-bar {
@@ -87,6 +88,11 @@
 
 .nav-link:hover {
   text-decoration: underline;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: white;
 }
 
 

@@ -1,39 +1,56 @@
+// Header.jsx
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-class Header extends React.Component {
-  render() {
-    return (
-      <header className="header">
-        {/* Fondo hero sutil con imagen */}
-        <div className="hero-background">
-          {/* Logo centrado */}
-          <div className="logo-container">
-            <img
-              src="/logo.png"
-              alt="McLaren Logo"
-              className="logo-img"
-            />
-          </div>
+export default function Header() {
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
+
+  return (
+    <header className="header">
+      {/* Fondo hero */}
+      <div className="hero-background">
+        <div className="logo-container">
+          <img src="/logo.png" alt="McLaren Logo" className="logo-img" />
         </div>
+      </div>
 
-        {/* Menú */}
-        <nav className="nav-bar">
-          <ul className="nav-list">
-            {['Equip F1', 'Historia', 'Pilots', 'Cotxe', 'Contacte'].map((item, i) => (
-              <li key={i} className="nav-item">
-                <a
-                  href={`#${item.toLowerCase().replace(/\s/g, '')}`}
-                  className="nav-link"
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </header>
-    );
-  }
+      {/* Menú */}
+      <nav className="nav-bar">
+        <ul className="nav-list">
+          <li className="nav-item">
+            <Link to="/inici" className={`nav-link ${isActive('/inici') ? 'active' : ''}`}>
+              Inici
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/equip" className={`nav-link ${isActive('/equip') ? 'active' : ''}`}>
+              Equip F1
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/historia" className={`nav-link ${isActive('/historia') ? 'active' : ''}`}>
+              Historia
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/pilots" className={`nav-link ${isActive('/pilots') ? 'active' : ''}`}>
+              Pilots
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/cotxe" className={`nav-link ${isActive('/cotxe') ? 'active' : ''}`}>
+              Cotxe
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/contacte" className={`nav-link ${isActive('/contacte') ? 'active' : ''}`}>
+              Contacte
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
 }
-
-export default Header;
