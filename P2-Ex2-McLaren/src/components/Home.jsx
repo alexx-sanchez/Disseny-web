@@ -1,48 +1,37 @@
 import React from 'react';
 
-class HomePage extends React.Component {
+class Home extends React.Component {
   render() {
     return (
-      <main className="bg-gray-950 text-white font-sans overflow-hidden">
+      <main className="home-main">
 
         {/* HERO */}
-        <section className="relative h-[90vh] flex flex-col justify-center items-center text-center">
+        <section className="hero">
           <img
             src="/home/hero-mclaren.webp"
             alt="McLaren F1 car on track"
-            className="absolute inset-0 w-full h-full object-cover opacity-40"
+            className="hero-img"
           />
-          <div className="relative z-10 px-6">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 text-orange-500 drop-shadow-lg">
-              McLaren F1 Team
-            </h1>
-            <p className="max-w-2xl mx-auto text-lg text-gray-300 mb-8">
+          <div className="hero-content">
+            <h1 className="hero-title">McLaren F1 Team</h1>
+            <p className="hero-text">
               Velocitat, innovació i passió. L’equip que redefineix els límits de la Fórmula 1.
             </p>
-            <a
-              href="#team"
-              className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold transition-all"
-            >
-              Descobreix més
-            </a>
+            <a href="#team" className="hero-btn">Descobreix més</a>
           </div>
         </section>
 
         {/* SOBRE EL EQUIPO */}
-        <section id="team" className="py-20 bg-gray-900">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 px-6 items-center">
-            <img
-              src="/home/mclaren-hq.webp"
-              alt="McLaren headquarters"
-              className="rounded-2xl shadow-lg"
-            />
-            <div>
-              <h2 className="text-4xl font-bold mb-4 text-orange-500">Un llegat de velocitat</h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+        <section id="team" className="team-section">
+          <div className="team-container">
+            <img src="/home/mclaren-hq.webp" alt="McLaren headquarters" className="team-img"/>
+            <div className="team-text">
+              <h2>Un llegat de velocitat</h2>
+              <p>
                 Fundada el 1963 per <strong>Bruce McLaren</strong>, la escuderia ha sigut una de les més icòniques de la Fórmula 1.
                 Amb desenes de victòries i múltiples campionats del món, McLaren continua liderant la innovació tecnològica a la pista.
               </p>
-              <p className="text-gray-400 leading-relaxed">
+              <p>
                 Des de la seva seu a Woking, Anglaterra, l’equip desenvolupa cada component amb una precisió obsessiva,
                 combinant ciència, rendiment i passió per la competició.
               </p>
@@ -51,7 +40,7 @@ class HomePage extends React.Component {
         </section>
 
         {/* PILOTOS */}
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 px-6">
+        <div className="drivers-container">
           {[
             {
               name: 'Oscar Piastri',
@@ -64,90 +53,68 @@ class HomePage extends React.Component {
               img: '/home/lando-norris.webp',
             },
           ].map((driver, i) => (
-            <div
-              key={i}
-              className="bg-gray-900 rounded-2xl shadow-xl overflow-hidden hover:scale-[1.02] transition-transform"
-            >
-              <img
-                src={driver.img}
-                alt={driver.name}
-                className="w-full h-[500px] object-cover"
-              />
-              <div className="p-6 text-center">
-                <h3 className="text-2xl font-semibold mb-2 text-orange-400">{driver.name}</h3>
-                <p className="text-gray-300">{driver.desc}</p>
+            <div key={i} className="driver-card">
+              <img src={driver.img} alt={driver.name} className="driver-img"/>
+              <div className="driver-info">
+                <h3>{driver.name}</h3>
+                <p>{driver.desc}</p>
               </div>
             </div>
           ))}
         </div>
 
-
         {/* ESTADÍSTICAS */}
-        <section className="bg-gray-900 py-20 text-center">
-          <h2 className="text-4xl font-bold mb-10 text-orange-500">Estadístiques 2025</h2>
-          <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto px-6">
+        <section className="stats-section">
+          <h2>Estadístiques 2025</h2>
+          <div className="stats-container">
             {[
               { number: '12', label: 'Victòries' },
               { number: '9', label: 'Poles' },
               { number: '28', label: 'Pòdiums' },
               { number: '1r', label: 'Posició al mundial' },
             ].map((stat, i) => (
-              <div
-                key={i}
-                className="bg-gray-800 rounded-xl p-6 shadow-md hover:scale-105 transition-transform"
-              >
-                <h3 className="text-5xl font-bold text-orange-500">{stat.number}</h3>
-                <p className="mt-2 text-gray-300">{stat.label}</p>
+              <div key={i} className="stat-card">
+                <h3>{stat.number}</h3>
+                <p>{stat.label}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* TECNOLOGÍA */}
-        <section className="bg-gray-950 py-20">
-          <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <section className="tech-section">
+          <div className="tech-container">
             <div>
-              <h2 className="text-4xl font-bold mb-4 text-orange-500">Innovació i rendiment</h2>
-              <p className="text-gray-300 mb-4 leading-relaxed">
+              <h2>Innovació i rendiment</h2>
+              <p>
                 Cada detall del McLaren és el resultat d’hores de simulacions, proves i anàlisi de dades.
                 L’ús de materials ultralleugers i aerodinàmica avançada marca la diferència a cada corba.
               </p>
-              <p className="text-gray-400">
+              <p>
                 Amb la tecnologia híbrida més sofisticada del paddock, McLaren s’ha convertit en sinònim de
                 precisió i eficiència dins i fora del circuit.
               </p>
             </div>
-            <img
-              src="/home/lab-tech.jpg_large"
-              alt="McLaren technology lab"
-              className="rounded-2xl shadow-lg"
-            />
+            <img src="/home/lab-tech.jpg_large" alt="McLaren technology lab" className="tech-img"/>
           </div>
         </section>
 
         {/* GALERÍA */}
-        <section className="bg-gray-900 py-20">
-          <h2 className="text-4xl font-bold text-center mb-12 text-orange-500">Moments destacats</h2>
-          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-6">
+        <section className="gallery-section">
+          <h2>Moments destacats</h2>
+          <div className="gallery-container">
             {['/home/moment1.jpeg', '/home/moment2.jpg', '/home/moment3.webp'].map((img, i) => (
-              <div key={i} className="overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={img}
-                  alt={`Moment ${i + 1}`}
-                  className="w-full h-64 md:h-80 lg:h-96 object-cover hover:opacity-80 transition-opacity"
-                />
+              <div key={i} className="gallery-card">
+                <img src={img} alt={`Moment ${i + 1}`} />
               </div>
             ))}
           </div>
         </section>
 
-
         {/* FRASE FINAL */}
-        <section className="bg-black text-center py-16">
-          <blockquote className="text-2xl italic max-w-3xl mx-auto text-gray-200">
-            “El nostre objectiu no és només competir, sinó inspirar el futur de la velocitat.”
-          </blockquote>
-          <p className="mt-4 text-gray-500">— Bruce McLaren</p>
+        <section className="quote-section">
+          <blockquote>“El nostre objectiu no és només competir, sinó inspirar el futur de la velocitat.”</blockquote>
+          <p>— Bruce McLaren</p>
         </section>
 
       </main>
@@ -155,4 +122,4 @@ class HomePage extends React.Component {
   }
 }
 
-export default HomePage;
+export default Home;
