@@ -5,7 +5,6 @@ class Home extends React.Component {
     return (
       <main className="home-main">
 
-        {/* HERO */}
         <section className="hero">
           <img
             src="/home/hero-mclaren.webp"
@@ -21,7 +20,6 @@ class Home extends React.Component {
           </div>
         </section>
 
-        {/* SOBRE EL EQUIPO */}
         <section id="team" className="team-section">
           <div className="team-container">
             <img src="/home/mclaren-hq.webp" alt="McLaren headquarters" className="team-img"/>
@@ -39,7 +37,6 @@ class Home extends React.Component {
           </div>
         </section>
 
-        {/* PILOTOS */}
         <div className="drivers-container">
           {[
             {
@@ -63,7 +60,6 @@ class Home extends React.Component {
           ))}
         </div>
 
-        {/* ESTADÍSTICAS */}
         <section className="stats-section">
           <h2>Estadístiques 2025</h2>
           <div className="stats-container">
@@ -81,7 +77,6 @@ class Home extends React.Component {
           </div>
         </section>
 
-        {/* TECNOLOGÍA */}
         <section className="tech-section">
           <div className="tech-container">
             <div>
@@ -99,11 +94,10 @@ class Home extends React.Component {
           </div>
         </section>
 
-        {/* GALERÍA */}
         <section className="gallery-section">
           <h2>Moments destacats</h2>
           <div className="gallery-container">
-            {['/home/moment1.jpeg', '/home/moment2.jpg', '/home/moment3.webp'].map((img, i) => (
+            {['/home/moment1.webp', '/home/moment2.webp', '/home/moment3.webp'].map((img, i) => (
               <div key={i} className="gallery-card">
                 <img src={img} alt={`Moment ${i + 1}`} />
               </div>
@@ -111,7 +105,6 @@ class Home extends React.Component {
           </div>
         </section>
 
-        {/* FRASE FINAL */}
         <section className="quote-section">
           <blockquote>“El nostre objectiu no és només competir, sinó inspirar el futur de la velocitat.”</blockquote>
           <p>— Bruce McLaren</p>

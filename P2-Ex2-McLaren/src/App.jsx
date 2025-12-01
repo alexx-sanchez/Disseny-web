@@ -7,6 +7,7 @@ import Historia from './components/Historia';
 import Pilots from './components/Pilots';
 import Cotxe from './components/Cotxe';
 import Contacte from './components/Contacte';
+import Multimedia from './components/Multimedia';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/pilots" element={<Pilots />} />
         <Route path="/cotxe" element={<Cotxe />} />
         <Route path="/contacte" element={<Contacte />} />
+        <Route path="/multimedia" element={<Multimedia />} />
       </Routes>
       <Footer />
     </>

@@ -9,14 +9,12 @@ export default function Header() {
 
   return (
     <header className="header">
-      {/* Fondo hero */}
       <div className="hero-background">
         <div className="logo-container">
           <img src="/logo.png" alt="McLaren Logo" className="logo-img" />
         </div>
       </div>
 
-      {/* Menú */}
       <nav className="nav-bar">
         <ul className="nav-list">
           <li className="nav-item">
@@ -47,6 +45,11 @@ export default function Header() {
           <li className="nav-item">
             <Link to="/contacte" className={`nav-link ${isActive('/contacte') ? 'active' : ''}`}>
               Contacte
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/multimedia" className={`nav-link ${isActive('/multimedia') ? 'active' : ''}`}>
+              Multimedia
             </Link>
           </li>
         </ul>
