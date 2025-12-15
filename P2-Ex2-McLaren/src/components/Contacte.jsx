@@ -6,16 +6,19 @@ export default function Contacte() {
 
   // useEffect s'executa quan el component es monta
   useEffect(() => {
-    nameInputRef.current.focus(); // Col·loca el focus a l'input
+    // Assegurem que la referència existeixi abans de posar focus
+    if (nameInputRef.current) {
+      nameInputRef.current.focus();
+    }
   }, []);
 
   return (
     <main className="contact-main">
       <section className="contact-section">
-        <h2>Contacta amb nosaltres</h2>
+        <h2 id="contact-title">Contacta amb nosaltres</h2>
         <p>Si tens dubtes o vols col·laborar amb McLaren F1, envia’ns un missatge!</p>
 
-        <form className="contact-form">
+        <form className="contact-form" aria-labelledby="contact-title">
           <label htmlFor="name">Nom complet</label>
           <input
             type="text"
@@ -23,16 +26,33 @@ export default function Contacte() {
             name="name"
             placeholder="El teu nom"
             required
-            ref={nameInputRef} // Assignem la referència aquí
+            aria-label="Nom complet del remitent"
+            ref={nameInputRef} // <-- Assignem la referència aquí
           />
 
           <label htmlFor="email">Correu electrònic</label>
-          <input type="email" id="email" name="email" placeholder="exemple@correu.com" required />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="exemple@correu.com"
+            required
+            aria-label="Adreça de correu electrònic"
+          />
 
           <label htmlFor="message">Missatge</label>
-          <textarea id="message" name="message" placeholder="Escriu el teu missatge..." rows="5" required></textarea>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Escriu el teu missatge..."
+            rows="5"
+            required
+            aria-label="Missatge del remitent"
+          ></textarea>
 
-          <button type="submit">Enviar</button>
+          <button type="submit" role="button" aria-label="Enviar formulari de contacte">
+            Enviar
+          </button>
         </form>
       </section>
     </main>
