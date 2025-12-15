@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 
 export default function Contacte() {
+  // Creem la referència per a l'input del nom
+  const nameInputRef = useRef(null);
+
+  // useEffect s'executa quan el component es monta
+  useEffect(() => {
+    nameInputRef.current.focus(); // Col·loca el focus a l'input
+  }, []);
+
   return (
     <main className="contact-main">
       <section className="contact-section">
@@ -9,7 +17,14 @@ export default function Contacte() {
 
         <form className="contact-form">
           <label htmlFor="name">Nom complet</label>
-          <input type="text" id="name" name="name" placeholder="El teu nom" required />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="El teu nom"
+            required
+            ref={nameInputRef} // Assignem la referència aquí
+          />
 
           <label htmlFor="email">Correu electrònic</label>
           <input type="email" id="email" name="email" placeholder="exemple@correu.com" required />
