@@ -228,3 +228,91 @@ ARIA i WCAG
    <button aria-label="Enviar formulari">Enviar</button>
 </form>
 ```
+
+
+
+1. Selectores
+
+p → selecciona todos los <p>. Sirve para aplicar estilo general a ese tipo de elemento.
+
+.clase → selecciona todos los elementos con esa clase. Sirve para agrupar estilos.
+
+#id → selecciona un elemento único por su id. Sirve para personalizar algo concreto.
+
+div > p → selecciona solo los <p> hijos directos de un div. Útil para no afectar otros <p>.
+
+div p → selecciona todos los <p> dentro de un div, aunque no sean hijos directos.
+
+a:hover → aplica estilo cuando pasas el cursor sobre un enlace.
+
+2. Colores y fondos
+
+color → cambia el color del texto.
+
+background-color → color de fondo de un elemento.
+
+background-image → poner una imagen de fondo.
+
+background-size: cover → la imagen cubre todo el elemento.
+
+background-repeat: no-repeat → la imagen no se repite.
+
+background-position: center → centra la imagen de fondo.
+
+3. Texto y fuentes
+
+font-family → tipo de letra (Arial, Times…).
+
+font-size → tamaño de letra.
+
+font-weight → grosor (normal, bold).
+
+font-style → estilo (normal, italic).
+
+text-align → alineación (left, center…).
+
+text-decoration → decoraciones (underline = subrayado, line-through = tachado).
+
+line-height → altura de la línea (espacio entre líneas).
+
+letter-spacing → espacio entre letras.
+
+4. Caja (Box Model)
+
+width y height → ancho y alto del elemento.
+
+padding → espacio dentro del borde.
+
+border → borde del elemento.
+
+margin → espacio fuera del borde.
+
+box-sizing: border-box → hace que el padding y borde se incluyan en el ancho y alto total (útil para que no se desconfigure).
+
+5. Display y posicionamiento
+
+display: block → ocupa toda la línea (ej: <div>).
+
+display: inline → ocupa solo lo que necesita el contenido (ej: <span>).
+
+display: inline-block → como inline, pero permite ancho y alto.
+
+display: flex → activa un contenedor flexible para alinear elementos.
+
+position: static → posición normal (por defecto).
+
+position: relative → se mueve relativo a su posición original.
+
+position: absolute → se posiciona respecto al primer padre con position: relative.
+
+position: fixed → fijo en la pantalla, aunque hagas scroll.
+
+position: sticky → se comporta como relative hasta que llegas a un límite y se queda “pegado”.
+
+6. Flexbox (básico)
+
+justify-content → alinea horizontalmente: flex-start, center, flex-end, space-between, space-around.
+
+align-items → alinea verticalmente dentro del contenedor: flex-start, center, flex-end, stretch.
+
+flex-direction → dirección de los elementos: row (horizontal), column (vertical).
