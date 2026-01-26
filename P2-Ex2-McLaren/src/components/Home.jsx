@@ -5,10 +5,10 @@ class Home extends React.Component {
     return (
       <main className="home-main">
 
-        <section className="hero">
+        <section className="hero" aria-label="Secció principal de McLaren F1 Team">
           <img
             src="/home/hero-mclaren.webp"
-            alt="McLaren F1 car on track"
+            alt="McLaren F1 car driving on track"
             className="hero-img"
           />
           <div className="hero-content">
@@ -16,17 +16,17 @@ class Home extends React.Component {
             <p className="hero-text">
               Velocitat, innovació i passió. L’equip que redefineix els límits de la Fórmula 1.
             </p>
-            <a href="#team" className="hero-btn">Descobreix més</a>
+            <a href="#team" className="hero-btn" aria-label="Descobreix més sobre l'equip McLaren">Descobreix més</a>
           </div>
         </section>
 
-        <section id="team" className="team-section">
+        <section id="team" className="team-section" aria-labelledby="team-title">
           <div className="team-container">
-            <img src="/home/mclaren-hq.webp" alt="McLaren headquarters" className="team-img"/>
+            <img src="/home/mclaren-hq.webp" alt="Seu central de McLaren a Woking, Anglaterra" className="team-img" />
             <div className="team-text">
-              <h2>Un llegat de velocitat</h2>
+              <h2 id="team-title">Un llegat de velocitat</h2>
               <p>
-                Fundada el 1963 per <strong>Bruce McLaren</strong>, la escuderia ha sigut una de les més icòniques de la Fórmula 1.
+                Fundada el 1963 per <strong>Bruce McLaren</strong>, l’escuderia ha sigut una de les més icòniques de la Fórmula 1.
                 Amb desenes de victòries i múltiples campionats del món, McLaren continua liderant la innovació tecnològica a la pista.
               </p>
               <p>
@@ -37,7 +37,7 @@ class Home extends React.Component {
           </div>
         </section>
 
-        <div className="drivers-container">
+        <section className="drivers-container" aria-label="Pilots de l'equip">
           {[
             {
               name: 'Oscar Piastri',
@@ -50,18 +50,18 @@ class Home extends React.Component {
               img: '/home/lando-norris.webp',
             },
           ].map((driver, i) => (
-            <div key={i} className="driver-card">
-              <img src={driver.img} alt={driver.name} className="driver-img"/>
+            <article key={i} className="driver-card">
+              <img src={driver.img} alt={`Foto de ${driver.name}`} className="driver-img" />
               <div className="driver-info">
                 <h3>{driver.name}</h3>
                 <p>{driver.desc}</p>
               </div>
-            </div>
+            </article>
           ))}
-        </div>
+        </section>
 
-        <section className="stats-section">
-          <h2>Estadístiques 2025</h2>
+        <section className="stats-section" aria-labelledby="stats-title">
+          <h2 id="stats-title">Estadístiques 2025</h2>
           <div className="stats-container">
             {[
               { number: '12', label: 'Victòries' },
@@ -77,10 +77,10 @@ class Home extends React.Component {
           </div>
         </section>
 
-        <section className="tech-section">
+        <section className="tech-section" aria-labelledby="tech-title">
           <div className="tech-container">
             <div>
-              <h2>Innovació i rendiment</h2>
+              <h2 id="tech-title">Innovació i rendiment</h2>
               <p>
                 Cada detall del McLaren és el resultat d’hores de simulacions, proves i anàlisi de dades.
                 L’ús de materials ultralleugers i aerodinàmica avançada marca la diferència a cada corba.
@@ -90,22 +90,31 @@ class Home extends React.Component {
                 precisió i eficiència dins i fora del circuit.
               </p>
             </div>
-            <img src="/home/lab-tech.jpg_large" alt="McLaren technology lab" className="tech-img"/>
+            <img src="/home/lab-tech.jpg_large" alt="Laboratori de tecnologia de McLaren" className="tech-img" />
           </div>
         </section>
 
-        <section className="gallery-section">
-          <h2>Moments destacats</h2>
-          <div className="gallery-container">
+        <section className="galleryAD-section" aria-labelledby="galleryAD-title">
+          <h2 id="galleryAD-title">Moments destacats</h2>
+          <div className="galleryAD-container">
             {['/home/moment1.webp', '/home/moment2.webp', '/home/moment3.webp'].map((img, i) => (
-              <div key={i} className="gallery-card">
-                <img src={img} alt={`Moment ${i + 1}`} />
+              <div
+                key={i}
+                className="galleryAD-card"
+                role="figure"
+                aria-label={`Moment destacat ${i + 1} de McLaren`}
+              >
+                <img src={img} alt={`Moment destacat ${i + 1} de McLaren`} />
               </div>
             ))}
           </div>
         </section>
 
-        <section className="quote-section">
+
+
+
+        <section className="quote-section" aria-labelledby="quote-title">
+          <h2 id="quote-title" className="sr-only">Cita de Bruce McLaren</h2>
           <blockquote>“El nostre objectiu no és només competir, sinó inspirar el futur de la velocitat.”</blockquote>
           <p>— Bruce McLaren</p>
         </section>

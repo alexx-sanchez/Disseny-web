@@ -13,6 +13,7 @@ export default function Gallery() {
   return (
     <div className="gallery-containerAD">
       <h1 className='galeriah1'>Galeria de fotos</h1>
+
       <section className="gallery-sectionAD">
         {carImages.map((img, i) => (
           <picture key={i} className="gallery-card">
@@ -23,8 +24,8 @@ export default function Gallery() {
         ))}
       </section>
 
-      <section className='audioSection'>
-        <h1 className='galeriah1'>Audio</h1>
+      <section className='audioSection' aria-labelledby="audio-title">
+        <h2 id="audio-title">Audio del McLaren F1</h2>
         <audio controls>
           <source src="/gallery/audio.mp3" type="audio/mpeg" />
           <source src="/gallery/audio.ogg" type="audio/ogg" />
@@ -32,11 +33,11 @@ export default function Gallery() {
         </audio>
       </section>
 
-      <section className="video-section">
-        <h2>Vídeo destacat del McLaren F1</h2>
+      <section className="video-section" aria-labelledby="video-title">
+        <h2 id="video-title">Vídeo destacat del McLaren F1</h2>
         <video controls preload="metadata" width="100%" style={{ borderRadius: '1rem' }}>
           <source src="/gallery/video.mp4" type="video/mp4" />
-          <source src="/gallery/video .webm" type="video/webm" />
+          <source src="/gallery/video.webm" type="video/webm" />
           El teu navegador no suporta la reproducció de vídeos.
         </video>
       </section>

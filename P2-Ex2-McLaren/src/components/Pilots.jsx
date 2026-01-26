@@ -16,21 +16,32 @@ export default function Pilots() {
 
   return (
     <main className="pilots-main">
-      <section className="pilots-hero">
-        <h1>Pilots McLaren F1 2025</h1>
+      <section className="pilots-hero" aria-labelledby="pilots-hero-title">
+        <h1 id="pilots-hero-title">Pilots McLaren F1 2025</h1>
         <p>Descobreix els pilots que competeixen aquest any amb l’equip McLaren.</p>
       </section>
 
-      <section className="pilots-section">
+      <section className="pilots-section" aria-labelledby="pilots-section-title">
+        <h2 id="pilots-section-title" className="sr-only">Llista de pilots McLaren 2025</h2>
         <div className="pilots-container">
           {pilots.map((pilot, i) => (
-            <div key={i} className="pilot-card">
-              <img src={pilot.img} alt={pilot.name} className="pilot-img" />
+            <article 
+              key={i} 
+              className="pilot-card" 
+              role="group" 
+              aria-labelledby={`pilot-name-${i}`} 
+              aria-describedby={`pilot-desc-${i}`}
+            >
+              <img 
+                src={pilot.img} 
+                alt={`Foto de ${pilot.name}`} 
+                className="pilot-img" 
+              />
               <div className="pilot-info">
-                <h3>{pilot.name}</h3>
-                <p>{pilot.desc}</p>
+                <h3 id={`pilot-name-${i}`}>{pilot.name}</h3>
+                <p id={`pilot-desc-${i}`}>{pilot.desc}</p>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </section>
