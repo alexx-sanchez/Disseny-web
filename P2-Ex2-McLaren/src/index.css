@@ -364,13 +364,7 @@ main {
   margin: 0 auto;
 }
 
-.gallery-card img {
-  width: 100%;
-  height: 16rem;
-  object-fit: cover;
-  border-radius: 1rem;
-  transition: opacity 0.3s;
-}
+
 
 .gallery-card img:hover {
   opacity: 0.8;
