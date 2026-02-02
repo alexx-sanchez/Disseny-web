@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Home -->
+  <url>
+    <loc>http://localhost:5173/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Equip -->
+  <url>
+    <loc>http://localhost:5173/equip</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Historia -->
+  <url>
+    <loc>http://localhost:5173/historia</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Pilots -->
+  <url>
+    <loc>http://localhost:5173/pilots</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Cotxe -->
+  <url>
+    <loc>http://localhost:5173/cotxe</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contacte -->
+  <url>
+    <loc>http://localhost:5173/contacte</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Multimedia -->
+  <url>
+    <loc>http://localhost:5173/multimedia</loc>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
