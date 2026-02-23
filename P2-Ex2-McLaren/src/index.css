@@ -1,12 +1,10 @@
-/* Header */
+/*  Header
 
-/* HEADER GENERAL */
 .header {
   width: 100%;
   position: relative;
 }
 
-/* HERO BACKGROUND */
 .hero-background {
   position: relative;
   height: 180px;
@@ -16,7 +14,6 @@
 
 @media (min-width: 640px) {
 
-  /* sm */
   .hero-background {
     height: 220px;
   }
@@ -24,13 +21,11 @@
 
 @media (min-width: 768px) {
 
-  /* md */
   .hero-background {
     height: 260px;
   }
 }
 
-/* LOGO CENTRADO */
 .logo-container {
   position: relative;
   height: 100%;
@@ -45,27 +40,22 @@
 
 @media (min-width: 640px) {
 
-  /* sm */
   .logo-img {
     max-height: 160px;
-    /* antes 100px */
   }
 }
 
 @media (min-width: 768px) {
 
-  /* md */
   .logo-img {
     max-height: 200px;
-    /* antes 120px */
   }
 }
 
 
-/* NAVEGACIÓN */
 .nav-bar {
   background-color: #f97316;
-  /* naranja McLaren */
+  
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -107,7 +97,7 @@
 }
 
 
-/* Header */
+ Header  */
 
 /* Home */
 

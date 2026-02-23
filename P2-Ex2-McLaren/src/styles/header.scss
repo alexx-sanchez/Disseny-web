@@ -1,0 +1,158 @@
+@import './_variables.scss';
+
+/* HEADER GENERAL */
+.header {
+  width: 100%;
+  position: relative;
+}
+
+/* HERO BACKGROUND (Mobile First) */
+.hero-background {
+  height: 180px;
+  overflow: hidden;
+  background: $color-dark;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .hero-background {
+    height: 220px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .hero-background {
+    height: 260px;
+  }
+}
+
+/* LOGO */
+.logo-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  max-height: 120px;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .logo-img {
+    max-height: 160px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .logo-img {
+    max-height: 200px;
+  }
+}
+
+/* NAVIGATION (Mobile First) */
+.nav-bar {
+  background: $color-primary;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+  // condicional (exemple)
+  @if $color-primary == #f97316 {
+    border-top: 2px solid $color-light;
+  }
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: $spacing 0;
+  gap: 0.5rem;
+}
+
+/* Tablet: menú horitzontal */
+@media (min-width: 640px) {
+  .nav-list {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* items */
+.nav-item {
+  padding: 0.25rem 0;
+}
+
+/* links */
+.nav-link {
+  font-size: $font-base;
+  font-weight: 500;
+  color: $color-dark;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &.active {
+    font-weight: bold;
+    color: $color-light;
+  }
+}
+
+/* bucle (exemple nitidesa) */
+@for $i from 1 through 5 {
+  .nav-item-#{$i} {
+    margin-right: $i * 0.5rem;
+  }
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.75rem;
+  display: block;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  margin: 4px 0;
+  background: #000;
+  transition: 0.3s;
+}
+
+/* menú ocult per defecte en mòbil */
+.nav-list {
+  display: none;
+  flex-direction: column;
+}
+
+/* quan està obert */
+.nav-list.open {
+  display: flex;
+}
+
+/* Tablet/desktop: menú sempre visible */
+@media (min-width: 640px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
